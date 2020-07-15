@@ -61,7 +61,38 @@ console.log(losValues);
 console.log(losValues1);
 
 
+//Logical Operator
+//|| &&
 
+const hisName = 'Bob';
+const ages = 24;
+
+if(hisName === 'Bob' && ages === 24){
+    console.log('Hello there ' + hisName);
+    
+}else{
+    console.log('Wrong value');
+    
+}
+
+// Switch statement
+// dice values : 1 - 6
+
+const dice = 2;
+
+switch(dice){
+    case 1:
+        console.log('You got One');
+        break;
+    case 2:
+        console.log('You got Two');
+        break;
+    case 3:
+        console.log('You got Three');
+        break;
+    default:
+        console.log('You did not roll the dice');
+}
 
 
 
