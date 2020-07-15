@@ -43,6 +43,36 @@ console.log({
 });
 
 
-console.log('--');
+console.log('------ ----- ----- ---- ---- --');
+
+//Refernce VS Value
+//Primitive data types
+//String, number, symbol, booleean, undefined, null
+//Arrays, functions, Objects = object typeof
+
+//When assigning primitive data type value to a variable, any changes are made directly
+//to that valeurs, without affecting original value.
+
+//When assigning a non-primitive data type value to a variable is
+//done by reference so any changes will affect all the references.
+
+//values Vs Reference
+const numbr = 1;
+let numbr2 = numbr;
+numbr2 = 7
+console.log(`The first value is ${numbr}`);
+console.log(`the second value is ${numbr2}`);
+
+
+let persons = {
+    name: 'Sian'
+}
+
+let persons2 = {...persons};//Using a copie instead of a reference will prevent the reassignment of the first variable
+persons2.name = 'Sam';
+
+console.log(`The name of the first person is ${persons.name}`);
+console.log(`The name of the second person is ${persons2.name}`);
+
 
 
