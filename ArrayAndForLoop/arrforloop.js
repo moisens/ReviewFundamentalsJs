@@ -75,4 +75,71 @@ console.log(`The name of the first person is ${persons.name}`);
 console.log(`The name of the second person is ${persons2.name}`);
 
 
+//Null & Undefined
+//both represent no value
 
+//Undefined: JS can't find a value for this.
+
+//variable without 
+//missing function arguments
+//missing object properties
+
+//null - 'developer sets the value'
+
+let hetNumber = 20 + null //20 + 0
+ console.log(hetNumber);
+
+ let hetNumber2 = 20 + undefined // 20 + 0
+ console.log(hetNumber2);
+
+
+ //Truthy and falsy
+ //"", '', 0, -0, NaN, false, null, undefined are evaluate to falsy
+
+ const bool1 = true;
+ const bool2 = 2 > 1;
+
+ if(bool1){
+     console.log('It works');
+ }
+ if(bool2){
+     console.log('It also works');
+ }
+
+ console.log('---- ---- --- ---- ---- ');
+
+ const oneText = 'toutou';
+
+ if(oneText){
+    console.log('hey the value Thruthy');
+ }else{
+     console.log('hey the value Falsy');
+ }
+
+
+console.log('------  ----- ------');
+
+//Unary operator -> typeof
+let texto = 'some text';
+console.log('texto is a: ' + typeof texto);
+
+//Binary operator ->assignment
+let numb1 = 3;
+let numb2 = 2 + 5;
+
+//Trenary operator
+//condition ? (run if true) : (run if false)
+
+let vall = 1 < 0;
+
+ if(vall){
+         console.log('the value is true');
+ }else{
+     console.log('the value is false');
+ }
+
+ console.log('------ ----- ----- ----- ----- ');
+vall ? console.log('The vall is true') : console.log('The vall is false')
+ 
+
+console.log('------ ----- ----- ----- ----- ');
