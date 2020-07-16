@@ -16,10 +16,10 @@ for(let i=0; i<nombers.length; i++){
 console.log('-------forEach--------');
 //forEach does not return a new array
 const peoples = [
-    {name: 'Bob', age: 20, position: 'developer', id:1},
-    {name: 'Peter', age: 25, position: 'designer', id:2},
-    {name: 'Suzy', age: 38, position: 'the boss', id:3},
-    {name: 'anna', age: 39, position: 'the boss2', id:4}
+    {name: 'Bob', age: 20, position: 'developer', id:1, salary: 200},
+    {name: 'Peter', age: 25, position: 'designer', id:2, salary: 300},
+    {name: 'Suzy', age: 38, position: 'the boss', id:3, salary: 500},
+    {name: 'anna', age: 39, position: 'the boss2', id:4, salary: 500}
 ]
 
 // function showPerson(person){
@@ -106,3 +106,20 @@ const persona2 = peoples.filter((people) =>{
 console.log(unePersonne);
 console.log(persona.name);//Object
 console.log(persona2[0].name);//Array
+
+console.log('------------reduce------------ ');
+//reduce
+//iterates, callback function
+//reduces to a single value - number, array, object
+//1 parameter ('acc') - total of all calculations
+//2 parameter ('curr) - current iteration/value
+
+const total = peoples.reduce((acc, curr) =>{
+    console.log(`total: ${acc}`);
+    console.log(`Current money:  ${curr.salary}`);
+    acc += curr.salary;
+    return acc;
+}, 0);
+console.log(`total: ${total}`);
+
+console.log('-----------');
