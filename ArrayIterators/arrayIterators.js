@@ -16,10 +16,10 @@ for(let i=0; i<nombers.length; i++){
 console.log('-------forEach--------');
 //forEach does not return a new array
 const peoples = [
-    {name: 'Bob', age: 20, position: 'developer'},
-    {name: 'Peter', age: 25, position: 'designer'},
-    {name: 'Suzy', age: 38, position: 'the boss'},
-    {name: 'anna', age: 39, position: 'the boss2'}
+    {name: 'Bob', age: 20, position: 'developer', id:1},
+    {name: 'Peter', age: 25, position: 'designer', id:2},
+    {name: 'Suzy', age: 38, position: 'the boss', id:3},
+    {name: 'anna', age: 39, position: 'the boss2', id:4}
 ]
 
 // function showPerson(person){
@@ -59,5 +59,50 @@ document.body.innerHTML = nammes.join('')
 
 
 console.log(aGes);
-console.log(newpeoples);
+console.table(newpeoples);
 console.log(nammes);
+
+
+console.log('--------filter--------');
+//filter
+//return a new array
+//can manipulate the size of new array
+//returns based on condition
+
+const youngPeople = peoples.filter((people) =>{
+    return people.age <= 25;
+});
+
+const dev = peoples.filter((people) =>{
+    return people.position === 'developer';
+})
+
+console.table(youngPeople);
+console.table(dev);
+
+
+console.log('------------find----------');
+
+//find 
+//returns singler instance - (in this case object)
+//return s first match, if no match undefined
+//great for getting unique value
+
+const lesPrenoms = ['Bob', 'Peter', 'Suzy']
+
+const unePersonne = lesPrenoms.find((lePrenom) =>{
+    return lePrenom === 'Bob'
+});
+
+
+const persona = peoples.find((people) =>{
+    return people.id === 3
+});
+//diff between filter and find, filter retun an arr find return an object
+const persona2 = peoples.filter((people) =>{
+    return people.id === 3
+});
+
+console.log(unePersonne);
+console.log(persona.name);//Object
+console.log(persona2[0].name);//Array
