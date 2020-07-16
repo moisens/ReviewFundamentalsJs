@@ -143,3 +143,54 @@ vall ? console.log('The vall is true') : console.log('The vall is false')
  
 
 console.log('------ ----- ----- ----- ----- ');
+
+
+//Global Scope Vs Local Scope
+//Any code block outsise of {} is said to be in Global Scope,
+//can be access anywhere in the program
+//name collisions, modify by mistake
+
+//Global scope
+let urName = 'Goku';
+urName = 'Vegeta';
+
+function renameByMistake(){
+    //Somme other code
+    console.log(urName);
+    urName = 'Lord Berrus'
+}
+renameByMistake();
+
+if(true){
+    //Somme other code
+    console.log(urName);
+    urName = 'Boo'
+}
+
+
+console.log(`His name is ${urName}`);
+
+console.log('-------- -----------------');
+//Local Scope
+ //Can not be access from outside code blocks 
+ //if NOT var
+
+ let tonBlaz = 'Apophis';
+
+function renameByMistaken(){
+    const tonBlaz ='Teal\'c';
+    const ages = 90;
+    //code goes here
+
+    //without the key word, javascript will 
+    //put this variable in the Global Scope
+    //wich is wy we need to protect our local variable by adding a key word => let or const
+    becomesGlobal = 'global variable'; 
+}
+renameByMistaken();
+console.log(becomesGlobal);
+if(true){
+   
+}
+
+console.log(`His name is ${tonBlaz}`);
