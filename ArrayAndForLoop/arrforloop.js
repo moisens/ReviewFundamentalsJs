@@ -194,3 +194,23 @@ if(true){
 }
 
 console.log(`His name is ${tonBlaz}`);
+
+
+//Variable lookup
+//{} - code block
+
+const globalNumber = 5;
+
+function addIt(num1, num2){
+    const globalNumber = 20;
+    const res = num1 + num2 + globalNumber;
+    
+    function mult(){
+        const globalNumber = 100;
+        const multRes = res * globalNumber
+        console.log(multRes);
+    }
+    mult();
+    return res;
+}
+console.log(addIt(3,4));
