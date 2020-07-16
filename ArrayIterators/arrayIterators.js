@@ -45,9 +45,9 @@ const aGes = peoples.map((people) =>{
 
 const newpeoples = peoples.map((people) =>{
     return {
-        firstname: people.name.toLocaleUpperCase(),
+        firstname: people.name.toUpperCase(),
         age: people.age + 20,
-        position: people.position.toLocaleUpperCase()
+        position: people.position.toUpperCase()
     }
 });
 
