@@ -120,3 +120,39 @@ last.previousElementSibling.style.color = 'orange'
 console.log(last.previousElementSibling);
 
 console.log('---------node value-------------');
+
+//node Value
+const special = document.getElementById('special');
+const val = special.nodeValue;
+console.log(val);//We get null , need to use choldNodes
+console.log(special.childNodes[0].nodeValue);
+//or
+console.log(special.firstChild.nodeValue);
+
+console.log('----textContent-------');
+//textContent
+const easyValue = special.textContent;
+console.log(easyValue);
+
+
+console.log('--------Get Attribute---Set Attribute-----');
+//get Attribute()
+const firstt = document.querySelector('.firstt');
+const classVal = firstt.getAttribute('id');
+console.log(classVal);
+
+const link = document.getElementById('link');
+const showLink = link.getAttribute('href');
+console.log(showLink);
+
+
+//set Attribute()
+
+
+
+
+
+const links = document.querySelectorAll('.firstt');
+console.log(links);
+
+
