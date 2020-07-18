@@ -20,7 +20,7 @@ btn.style.border = 'none';
 console.log('------getElementsByTagName----------');
 //getElementsByTagName('tagname');
 const headings = document.getElementsByTagName('h2');
-headings[0].style.color = 'red';
+//headings[0].style.color = 'red';
 console.log(headings.length);
 
 const items = document.getElementsByTagName('li');
@@ -87,4 +87,13 @@ console.log(results.lastChild);
 console.log(results.lastElementChild); 
 
 console.log('----------parent element--------');
+//parent element
+const heading = document.querySelector('h2')
+console.log(heading.parentElement.parentElement);
+const parent = heading.parentElement;
+
+parent.style.color = 'blue';
+
+
+console.log('----------prev, next sibling-------');
 
