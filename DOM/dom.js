@@ -67,5 +67,24 @@ lists.forEach((list) =>{
 
 
 console.log('-----childNodes-------');
+//childNodes - returns all the childNodes including whitespace
+//witch is treated as a text node. 
 
+//children
+//firstChild
+//lastChild
+
+const results = document.querySelector('#results')
+const allchildren = results.childNodes;
+console.log(allchildren);//will retuns all, textNodes + children
+
+const children = results.children;
+console.log(children);
+
+console.log(results.firstChild)
+console.log(results.firstElementChild);
+console.log(results.lastChild);
+console.log(results.lastElementChild); 
+
+console.log('----------parent element--------');
 
