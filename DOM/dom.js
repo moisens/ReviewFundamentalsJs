@@ -97,3 +97,26 @@ parent.style.color = 'blue';
 
 console.log('----------prev, next sibling-------');
 
+//prev sibling
+//next sibling
+//return whitespace
+
+const first = document.querySelector('.first');
+const last = document.querySelector('#last')
+
+const second = first.nextSibling;//will return a textNode
+const second1 = first.nextSibling.nextSibling.style.color = 'red';
+console.log(second);
+
+const third = last.previousSibling.previousSibling
+console.log(third);
+
+console.log(last.nextSibling.nextSibling);//If u try to access the next sibling of the last elem, you'll get null
+console.log('--------nextElementSibling---------');
+
+//nextElementSibling
+first.nextElementSibling.style.backgroundColor = 'lightblue';
+last.previousElementSibling.style.color = 'orange'
+console.log(last.previousElementSibling);
+
+console.log('---------node value-------------');
