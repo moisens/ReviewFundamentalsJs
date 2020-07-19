@@ -45,3 +45,22 @@ headin.addEventListener('mouseenter', function(){
 headin.addEventListener('mouseleave', function(){
     headin.classList.remove('red');
 });
+
+
+//keypress - when key is pressed
+//keydown - when key is down
+//keyup - when key is released
+
+ const nameInput = document.querySelector('#name');
+
+// nameInput.addEventListener('keypress', function(){
+//     console.log(nameInput.value);
+// });
+
+// nameInput.addEventListener('keydown', function(){
+//     console.log(nameInput.value);
+// });
+
+nameInput.addEventListener('keyup', function(){
+    console.log(nameInput.value);
+});
