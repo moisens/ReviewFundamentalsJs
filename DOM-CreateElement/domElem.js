@@ -40,5 +40,13 @@ const heading1 = document.createElement('h2');
 heading1.innerText = `i'am a dynamic heading 2`;
 document.body.prepend(heading1);
 
-//
+//remove
+//removeChild
+
+const resultat = document.querySelector('#resultat');
+//resultat.remove();
+
+const heading2 = resultat.querySelector('h4');
+resultat.removeChild(heading2)
+console.log(heading2);
 
