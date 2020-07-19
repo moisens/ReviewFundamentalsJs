@@ -84,3 +84,19 @@ ul.textContent = `
     <li class="item">${randomVal}</li>
     <li>list item</li>
 `;
+
+
+//CSS
+const random = document.querySelector('.random');
+// random.style.backgroundColor = 'blue';
+// random.style.color = '#fff';
+// random.style.fontSize = '3rem';
+// random.style.textTransform = 'capitalize';
+
+//Better way
+random.classList.add('title')
+
+
+
+
+console.log(random.style);
