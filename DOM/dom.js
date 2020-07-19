@@ -145,14 +145,43 @@ const link = document.getElementById('link');
 const showLink = link.getAttribute('href');
 console.log(showLink);
 
-
+console.log('---------Set ttribute---------');
 //set Attribute()
-
-
-
-
+const thelast = link.nextElementSibling;
+thelast.setAttribute('class', 'firstt');
+thelast.textContent = 'i also have a class of first'
+console.log(thelast);
 
 const links = document.querySelectorAll('.firstt');
 console.log(links);
 
+console.log('----className--classList----');
+
+//className
+const fiisrt = document.getElementById('fiirst');
+const seconds = document.getElementById('seconds')
+const thirds = document.getElementById('thirds')
+
+const classValues = fiisrt.className;
+seconds.className = 'colors text'; //in this case better use classList
+
+console.log(classValues);
+
+console.log('-----classList----');
+//classList
+
+thirds.classList.add('colors', 'text');
+//thirds.classList.add('text')
+thirds.classList.remove('text');
+
+let oneResult = thirds.classList.contains('colors');
+if(oneResult){
+    console.log('You have the class colors');
+}else{
+    console.log('You don\'t have the class colors');
+}
+
+
+const classValue = thirds.classList;
+console.log(classValue);
 
