@@ -34,3 +34,11 @@ document.body.replaceChild(smallHeading, bodyDiv)
  console.log(result.children);
 
 
+ //prepend
+ //innerText
+const heading1 = document.createElement('h2');
+heading1.innerText = `i'am a dynamic heading 2`;
+document.body.prepend(heading1);
+
+//
+
