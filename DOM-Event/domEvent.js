@@ -64,3 +64,25 @@ headin.addEventListener('mouseleave', function(){
 nameInput.addEventListener('keyup', function(){
     console.log(nameInput.value);
 });
+
+
+
+//event object argument e,evt
+//info about triggered event
+//event.type
+//event.currentTarget
+//this heyword
+//preventDefault() - prevents default behaviour
+
+
+const someHeding = document.querySelector('.someHeding');
+const link  = document.querySelector('#link');
+const btnEvent = document.querySelector('.btn-event');
+
+someHeding.addEventListener('click', function(e){
+    console.log(e.currentTarget);
+});
+
+btnEvent.addEventListener('click', function(e){
+    e.currentTarget.classList.add('blue');
+});
