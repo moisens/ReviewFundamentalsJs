@@ -50,3 +50,37 @@ const heading2 = resultat.querySelector('h4');
 resultat.removeChild(heading2)
 console.log(heading2);
 
+
+//innerHTML
+//textContent
+
+const list = document.getElementById('first');
+const div = document.getElementById('second');
+const item = document.querySelector('.item');
+
+console.log(div.textContent);
+console.log(list.innerHTML);
+console.log(list.textContent);
+
+const randomVal = 'Radom Value'
+const ul = document.createElement('ul');
+ul.innerHTML = `
+    <li class="item">${randomVal}</li>
+    <li>list item</li>
+    <li class="item">${randomVal}</li>
+    <li>list item</li>
+`;
+
+document.body.appendChild(ul);
+
+div.textContent = 'Hello world';
+div.innerHTML = 'Hello people';
+
+document.write('------carrefull---');
+//When dynamically adding text in the doc, use innerHtml, textcontent will return in this case a html tag + the content
+ul.textContent = `
+    <li class="item">${randomVal}</li>
+    <li>list item</li>
+    <li class="item">${randomVal}</li>
+    <li>list item</li>
+`;
