@@ -98,3 +98,21 @@ function linkScroll(e){
     //preventDefault
     e.preventDefault();
 }
+
+
+//currentTarget - always refers to the element to which the event handle has been attached to
+//target - identifies the element  on wich the event occured
+
+const btns = document.querySelectorAll('.btns');
+
+btns.forEach((btn) =>{
+    btn.addEventListener('click', addColor);
+
+    function addColor(e){
+        console.log('target', e.currentTarget);
+        e.currentTarget.style.color = 'lightblue';
+        console.log('target',e.target);
+        e.target.style.color = 'black';
+    }
+})
+

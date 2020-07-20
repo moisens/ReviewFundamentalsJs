@@ -19,7 +19,7 @@
             letter-spacing: 10px;
         }
 
-        .btn{
+        .btn, .btns{
             background-color: red;
             color: #fff;
             border: none;
@@ -29,7 +29,7 @@
 
         a{
             display: inline-block;
-            margin-top: 100vh;
+            /* margin-top: 100vh; */
         }
     </style>
 </head>
@@ -43,8 +43,14 @@
     <input type="text" id="name">
     <button class="btn btn-event">Click!</button>
     <h1 class="someHeding">some heading</h1>
+
+    <button class="btns">first button</button>
+    <button class="btns">second <strong>button <strong>more nested</strong> </strong> </button>
+    <button class="btns">third button</button>
+
     <a href="#" id="link">random link</a>
 
+    
     <script src="domEvent.js"></script>
 </body>
 </html>
