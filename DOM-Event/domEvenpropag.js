@@ -24,4 +24,36 @@ function showBubbling(e){
 
 list.addEventListener('click', showBubbling, {capture: true});
 // list.addEventListener('click', stopPropagation);
-container.addEventListener('click', showBubbling, {capture: true})
+container.addEventListener('click', showBubbling, {capture: true});
+
+
+
+const containers = document.querySelector('.containers');
+const btn = document.querySelector('.btn');
+//const heading = document.querySelector('.heading');
+//console.log(heading)
+
+ 
+ function sayHello(){
+     console.log('hello little fella');
+ }
+ //heading.addEventListener('click', sayHello);
+
+ 
+
+ function createElementOnClick(){
+     const h1 = document.createElement('h1')
+     h1.classList.add('heading')
+     h1.textContent = 'I\'m inside the container'; //appendChild(document.createTextNode('i\'m the seconds h1'));
+     containers.appendChild(h1)
+     console.log(containers);
+
+ }
+ btn.addEventListener('click', createElementOnClick);
+
+ containers.addEventListener('click', getDynamicElement);
+ function getDynamicElement(e){
+     if(e.target.classList.contains('heading')){
+         console.log('hello there');
+     }
+ }
