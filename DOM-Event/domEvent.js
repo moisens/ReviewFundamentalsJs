@@ -78,11 +78,23 @@ nameInput.addEventListener('keyup', function(){
 const someHeding = document.querySelector('.someHeding');
 const link  = document.querySelector('#link');
 const btnEvent = document.querySelector('.btn-event');
-
+//event.currentTarget
 someHeding.addEventListener('click', function(e){
     console.log(e.currentTarget);
+    console.log(this);
 });
 
 btnEvent.addEventListener('click', function(e){
     e.currentTarget.classList.add('blue');
 });
+
+//event.type
+btnEvent.addEventListener('click', function(e){
+    console.log(e.type);
+});
+
+link.addEventListener('click', linkScroll)
+function linkScroll(e){
+    //preventDefault
+    e.preventDefault();
+}
